@@ -52,10 +52,31 @@ namespace AdventOfCode2015
             while (numPresentPerHouse > minPresents)
             {
                 cptNumHouse--;
-                numPresentPerHouse = CalculatePresents(cptNumHouse); 
+                numPresentPerHouse = CalculatePresents(cptNumHouse);
             }
             cptNumHouse++;
             Console.WriteLine(String.Format("We need {0} houses to deliver at minimum {1} presents per house ({2} presents exactly)", cptNumHouse, minPresents, CalculatePresents(cptNumHouse)));
+
+            Console.WriteLine("***********************************");
+
+            numPresentPerHouse = 0;
+            cptNumHouse = 0;
+            while (numPresentPerHouse < minPresents)
+            {
+                numPresentPerHouse = CalculatePresents_Limited(cptNumHouse, 50);
+                cptNumHouse += 10; // Too slow if we are gonna do it one by one; there are better solutions for sure
+            }
+            cptNumHouse -= 10;
+
+            while (numPresentPerHouse > minPresents)
+            {
+                cptNumHouse--;
+                numPresentPerHouse = CalculatePresents_Limited(cptNumHouse, 50);
+            }
+            cptNumHouse++;
+            Console.WriteLine(String.Format("We need {0} houses to deliver at minimum {1} presents per house ({2} presents exactly)", cptNumHouse, minPresents, CalculatePresents_Limited(cptNumHouse, 50)));
+
+
 
             //int total = 0;
             //foreach (int value in ComputeHouses(minPresents))
@@ -78,7 +99,7 @@ namespace AdventOfCode2015
             //Console.WriteLine(String.Format("We need {0} houses to deliver at minimum {1} presents per house", cptHouse, minPresents));
         }
 
-        
+
 
         public static IEnumerable<int> ComputePresents(int minPresents)
         {
@@ -145,6 +166,21 @@ namespace AdventOfCode2015
             return countPresents;
         }
 
-        
+        public static int CalculatePresents_Limited(int numHouses, int maxHousesVisited)
+        {
+            int cptElves = 1;
+            int countPresents = 0;
+            int presentPerElf = 11;
+            while (cptElves <= numHouses)
+            {
+                bool elfMustDeliverPresents = (numHouses / cptElves <= maxHousesVisited) && (numHouses % cptElves == 0);
+                if (elfMustDeliverPresents)
+                {
+                    countPresents += cptElves * presentPerElf;
+                }
+                cptElves++;
+            }
+            return countPresents;
+        }
     }
 }
