@@ -5,7 +5,7 @@ using AdventOfCode2015;
 namespace AdventOfCode2015UnitTests
 {
     [TestClass]
-    public class Day1_UnitTest
+    public class Day01_UnitTest
     {
         //[TestCleanup]
         //public void CleanUp()
@@ -13,7 +13,7 @@ namespace AdventOfCode2015UnitTests
 
         //}
 
-        [TestMethod][TestCategory("Day1")]
+        [TestMethod][TestCategory("Day01")]
         public void NotQuiteLisp_Simple()
         {
             Day1.NotQuiteLisp("()()()()()())");
@@ -22,7 +22,7 @@ namespace AdventOfCode2015UnitTests
         }
 
         [TestMethod]
-        [TestCategory("Day1")]
+        [TestCategory("Day01")]
         public void NotQuiteLisp_Complex()
         {
             Day1.NotQuiteLisp(String.Empty);

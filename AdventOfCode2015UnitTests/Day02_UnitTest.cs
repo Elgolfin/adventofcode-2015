@@ -9,11 +9,11 @@ namespace AdventOfCode2015UnitTests
     /// Summary description for Day2_UnitTest
     /// </summary>
     [TestClass]
-    public class Day2_UnitTest
+    public class Day02_UnitTest
     {
         
         [TestMethod]
-        [TestCategory("Day2")]
+        [TestCategory("Day02")]
         public void IWasToldThereWouldBeNoMath_BasicConstructor_Box_1x1x1()
         {
             Box box = new Box("1x1x1");
@@ -23,7 +23,7 @@ namespace AdventOfCode2015UnitTests
         }
 
         [TestMethod]
-        [TestCategory("Day2")]
+        [TestCategory("Day02")]
         public void IWasToldThereWouldBeNoMath_Box_2x3x4()
         {
             Box box = new Box("2x3x4");
@@ -37,7 +37,7 @@ namespace AdventOfCode2015UnitTests
         }
 
         [TestMethod]
-        [TestCategory("Day2")]
+        [TestCategory("Day02")]
         public void IWasToldThereWouldBeNoMath_Box_1x1x10()
         {
             Box box = new Box("1x1x10");

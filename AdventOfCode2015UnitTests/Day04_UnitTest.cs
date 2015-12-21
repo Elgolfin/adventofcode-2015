@@ -5,11 +5,11 @@ using AdventOfCode2015;
 namespace AdventOfCode2015UnitTests
 {
     [TestClass]
-    public class Day4_UnitTest
+    public class Day04_UnitTest
     {
 
         [TestMethod]
-        [TestCategory("Day4")]
+        [TestCategory("Day04")]
         public void TheIdealStockingStuffer_1()
         {
             string secretKey = "abcdef";
@@ -17,7 +17,7 @@ namespace AdventOfCode2015UnitTests
         }
 
         [TestMethod]
-        [TestCategory("Day4")]
+        [TestCategory("Day04")]
         public void TheIdealStockingStuffer_2()
         {
             string secretKey = "pqrstuv";

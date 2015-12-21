@@ -52,9 +52,10 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Day4_UnitTest.cs" />
-    <Compile Include="Day1_UnitTest.cs" />
-    <Compile Include="Day2_UnitTest.cs" />
+    <Compile Include="Day20_UnitTest.cs" />
+    <Compile Include="Day04_UnitTest.cs" />
+    <Compile Include="Day01_UnitTest.cs" />
+    <Compile Include="Day02_UnitTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -11,9 +11,10 @@ namespace AdventOfCode2015
     {
         static void Main(string[] args)
         {
-            Day1.NotQuiteLisp(String.Empty);
-            Day2.IWasToldThereWouldBeNoMath();
-            Day4.TheIdealStockingStuffer("iwrupvqb");
+            //Day1.NotQuiteLisp(String.Empty);
+            //Day2.IWasToldThereWouldBeNoMath();
+            //Day4.TheIdealStockingStuffer("iwrupvqb");
+            Day20.InfiniteElvesAndInfiniteHouses(34000000);
             Console.ReadKey();
         }
     }
