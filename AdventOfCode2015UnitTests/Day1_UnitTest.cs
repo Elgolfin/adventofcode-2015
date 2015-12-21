@@ -13,7 +13,7 @@ namespace AdventOfCode2015UnitTests
 
         //}
 
-        [TestMethod]
+        [TestMethod][TestCategory("Day1")]
         public void NotQuiteLisp_Simple()
         {
             Day1.NotQuiteLisp("()()()()()())");
@@ -22,6 +22,7 @@ namespace AdventOfCode2015UnitTests
         }
 
         [TestMethod]
+        [TestCategory("Day1")]
         public void NotQuiteLisp_Complex()
         {
             Day1.NotQuiteLisp(String.Empty);

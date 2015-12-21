@@ -13,6 +13,7 @@ namespace AdventOfCode2015
         {
             Day1.NotQuiteLisp(String.Empty);
             Day2.IWasToldThereWouldBeNoMath();
+            Day4.TheIdealStockingStuffer("iwrupvqb");
             Console.ReadKey();
         }
     }
