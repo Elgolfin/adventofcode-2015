@@ -41,5 +41,39 @@ namespace AdventOfCode2015UnitTests
             grid.GoDirections(directions);
             Assert.AreEqual(2, grid.GetHousesWithAtLeastOnePresent());
         }
+
+
+        [TestMethod]
+        [TestCategory("Day03")]
+        public void PerfectlySphericalHousesInAVacuum_Simple1_WithRoboSanta()
+        {
+            string directions = "^v";
+            bool UseRoboSanta = true;
+            HousesGrid grid = new HousesGrid(UseRoboSanta);
+            grid.GoDirections(directions);
+            Assert.AreEqual(3, grid.GetHousesWithAtLeastOnePresent());
+        }
+
+        [TestMethod]
+        [TestCategory("Day03")]
+        public void PerfectlySphericalHousesInAVacuum_Simple2_WithRoboSanta()
+        {
+            string directions = "^>v<";
+
+            bool UseRoboSanta = true; HousesGrid grid = new HousesGrid(UseRoboSanta);
+            grid.GoDirections(directions);
+            Assert.AreEqual(3, grid.GetHousesWithAtLeastOnePresent());
+        }
+
+        [TestMethod]
+        [TestCategory("Day03")]
+        public void PerfectlySphericalHousesInAVacuum_Simple3_WithRoboSanta()
+        {
+            string directions = "^v^v^v^v^v";
+
+            bool UseRoboSanta = true; HousesGrid grid = new HousesGrid(UseRoboSanta);
+            grid.GoDirections(directions);
+            Assert.AreEqual(11, grid.GetHousesWithAtLeastOnePresent());
+        }
     }
 }
