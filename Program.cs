@@ -11,11 +11,11 @@ namespace AdventOfCode2015
     {
         static void Main(string[] args)
         {
-            //Day1.NotQuiteLisp(String.Empty);
-            //Day2.IWasToldThereWouldBeNoMath();
-            Day3.PerfectlySphericalHousesInAVacuum_Part1();
-            Day3.PerfectlySphericalHousesInAVacuum_Part2();
-            //Day4.TheIdealStockingStuffer("iwrupvqb");
+            //Day01.NotQuiteLisp(String.Empty);
+            //Day02.IWasToldThereWouldBeNoMath();
+            Day03.PerfectlySphericalHousesInAVacuum_Part1();
+            Day03.PerfectlySphericalHousesInAVacuum_Part2();
+            //Day04.TheIdealStockingStuffer("iwrupvqb");
             //Day20.InfiniteElvesAndInfiniteHouses(34000000);
             //Day21.RPGSimulator20XXPart1();
             //Day21.RPGSimulator20XXPart2();

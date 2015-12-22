@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AdventOfCode2015
 {
-    public class Day1
+    public class Day01
     {
 
         public static int firstTimeEnteringBasement = 0;

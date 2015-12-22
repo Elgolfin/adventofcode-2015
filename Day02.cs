@@ -28,7 +28,7 @@ namespace AdventOfCode2015
     ///     
     /// How many total feet of ribbon should they order?
     /// </summary>
-    public class Day2
+    public class Day02
     {
         public static void IWasToldThereWouldBeNoMath()
         {

@@ -7,7 +7,7 @@ using System.Security.Cryptography;
 
 namespace AdventOfCode2015
 {
-    public class Day4
+    public class Day04
     {
         /// <summary>
         /// --- Day 4: The Ideal Stocking Stuffer ---

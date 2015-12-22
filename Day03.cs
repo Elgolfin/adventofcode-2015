@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AdventOfCode2015
 {
-    public class Day3
+    public class Day03
     {
         /// <summary>
         /// --- Day 3: Perfectly Spherical Houses in a Vacuum ---

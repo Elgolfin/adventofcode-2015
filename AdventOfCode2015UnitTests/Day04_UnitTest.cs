@@ -13,7 +13,7 @@ namespace AdventOfCode2015UnitTests
         public void TheIdealStockingStuffer_1()
         {
             string secretKey = "abcdef";
-            Assert.AreEqual("609043", Day4.FindLowestPositiveNumber(secretKey));
+            Assert.AreEqual("609043", Day04.FindLowestPositiveNumber(secretKey));
         }
 
         [TestMethod]
@@ -21,7 +21,7 @@ namespace AdventOfCode2015UnitTests
         public void TheIdealStockingStuffer_2()
         {
             string secretKey = "pqrstuv";
-            Assert.AreEqual("1048970", Day4.FindLowestPositiveNumber(secretKey));
+            Assert.AreEqual("1048970", Day04.FindLowestPositiveNumber(secretKey));
         }
 
 

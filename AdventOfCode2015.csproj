@@ -43,12 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Day1.cs" />
-    <Compile Include="Day2.cs" />
+    <Compile Include="Day01.cs" />
+    <Compile Include="Day02.cs" />
     <Compile Include="Day20.cs" />
     <Compile Include="Day21.cs" />
-    <Compile Include="Day3.cs" />
-    <Compile Include="Day4.cs" />
+    <Compile Include="Day03.cs" />
+    <Compile Include="Day04.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
