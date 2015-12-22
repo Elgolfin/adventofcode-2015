@@ -8,8 +8,8 @@ namespace AdventOfCode2015UnitTests
     public class Day21_UnitTest
     {
 
-        [TestMethod]
-        [TestCategory("Day21")]
+        //[TestMethod]
+        //[TestCategory("Day21")]
         //public void InfiniteElvesAndInfiniteHouses_CalculatePresents_House1()
         //{
         //    Assert.AreEqual(10, 11);

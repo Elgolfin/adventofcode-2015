@@ -13,10 +13,11 @@ namespace AdventOfCode2015
         {
             //Day1.NotQuiteLisp(String.Empty);
             //Day2.IWasToldThereWouldBeNoMath();
+            Day3.PerfectlySphericalHousesInAVacuum_Part1();
             //Day4.TheIdealStockingStuffer("iwrupvqb");
             //Day20.InfiniteElvesAndInfiniteHouses(34000000);
-            Day21.RPGSimulator20XXPart1();
-            Day21.RPGSimulator20XXPart2();
+            //Day21.RPGSimulator20XXPart1();
+            //Day21.RPGSimulator20XXPart2();
             Console.ReadKey();
         }
     }
