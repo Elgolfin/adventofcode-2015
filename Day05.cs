@@ -138,7 +138,8 @@ namespace AdventOfCode2015
         public static bool DoesContainALetterTwiceInARow(this string input)
         {
             bool DoesContainALetterTwiceInARow = false;
-            Regex regex = new Regex(@"(aa|bb|cc|dd|ee|ff|gg|hh|ii|jj|kk|ll|mm|nn|oo|pp|qq|rr|ss|tt|uu|vv|ww|xx|yy|zz)");
+            Regex regex = new Regex(@"(aa|bb|cc|dd|ee|ff|gg|hh|ii|jj|kk|ll|mm|nn|oo|pp|qq|rr|ss|tt|uu|vv|ww|xx|yy|zz)"); // Optimal Regx but works only for alphabetical characters
+            //Regex regex = new Regex(@"([a-z])\1"); // Not optimal, Regex is greedy
             Match match = regex.Match(input);
             if (match.Success)
             {
@@ -178,7 +179,7 @@ namespace AdventOfCode2015
 
                 currentPair = BuildPair(currentPair, c);
 
-                string regexPattern = String.Format("{0}[a-z]*{0}", currentPair); // Not optimal, regex is eager
+                string regexPattern = String.Format("{0}[a-z]*{0}", currentPair); // Not optimal, regex is greedy
                 Regex regex = new Regex(regexPattern);
                 Match match = regex.Match(input);
                 if (match.Success)
