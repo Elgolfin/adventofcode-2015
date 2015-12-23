@@ -33,7 +33,7 @@ I used two Regex to detect if a string:
 
 I also used a custom method to handle if a string does contain any pair of two letters appearing twice without overlapping. Not really sure if we can do that with a Regex (I will do some further research).
 
-I leveraged the [Extension Methods] of the C# framework.
+I leveraged the [Extension Methods][l2] of the C# framework.
 
 ##Day10 Solution
 
