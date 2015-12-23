@@ -21,11 +21,11 @@ namespace AdventOfCode2015
     ///
     /// For example:
     ///
-    ///  ugknbfddgicrmopn is nice because it has at least three vowels(u...i...o...), a double letter(...dd...), and none of the disallowed substrings.
-    ///  aaa is nice because it has at least three vowels and a double letter, even though the letters used by different rules overlap.
-    ///  jchzalrnumimnmhp is naughty because it has no double letter.
-    ///  haegwjzuvuyypxyu is naughty because it contains the string xy.
-    ///  dvszwmarrgswjxmb is naughty because it contains only one vowel.
+    ///    ugknbfddgicrmopn is nice because it has at least three vowels(u...i...o...), a double letter(...dd...), and none of the disallowed substrings.
+    ///    aaa is nice because it has at least three vowels and a double letter, even though the letters used by different rules overlap.
+    ///    jchzalrnumimnmhp is naughty because it has no double letter.
+    ///    haegwjzuvuyypxyu is naughty because it contains the string xy.
+    ///    dvszwmarrgswjxmb is naughty because it contains only one vowel.
     ///
     /// How many strings are nice?
     ///
@@ -35,8 +35,8 @@ namespace AdventOfCode2015
     ///
     /// Now, a nice string is one with all of the following properties:
     ///
-    ///  It contains a pair of any two letters that appears at least twice in the string without overlapping, like xyxy (xy) or aabcdefgaa(aa), but not like aaa(aa, but it overlaps).
-    ///  It contains at least one letter which repeats with exactly one letter between them, like xyx, abcdefeghi(efe), or even aaa.
+    ///    It contains a pair of any two letters that appears at least twice in the string without overlapping, like xyxy (xy) or aabcdefgaa(aa), but not like aaa(aa, but it overlaps).
+    ///    It contains at least one letter which repeats with exactly one letter between them, like xyx, abcdefeghi(efe), or even aaa.
     ///
     /// For example:
     ///
@@ -57,6 +57,24 @@ namespace AdventOfCode2015
                 while (sr.Peek() >= 0) 
                 {
                     string line = sr.ReadLine();
+                    if (line.IsRidiculouslyNice())
+                    {
+                        countNiceStrings++;
+                        Console.WriteLine(line);
+                    }
+                }
+            }
+            Console.WriteLine(String.Format("There are {0} ridiculously nice strings", countNiceStrings));
+        }
+
+        public static void DoesntHeHaveInternElvesForThis_Part2()
+        {
+            int countNiceStrings = 0;
+            using (StreamReader sr = new StreamReader("../../day05.txt"))
+            {
+                while (sr.Peek() >= 0)
+                {
+                    string line = sr.ReadLine();
                     if (line.IsNice())
                     {
                         countNiceStrings++;
@@ -64,10 +82,22 @@ namespace AdventOfCode2015
                     }
                 }
             }
-            Console.WriteLine(String.Format("There are {0} nice strings",countNiceStrings));
+            Console.WriteLine(String.Format("There are {0} nice strings", countNiceStrings));
         }
 
         public static bool IsNice(this string input)
+        {
+            bool IsNice = false;
+            IsNice = input.DoesContainAnyPairOfTwoLettersAppearingTwiceWithoutOverlapping()
+                     && input.DoesContainOneLetterWhichRepeatsWithExactlyOneLetterBetweenThem();
+            return IsNice;
+        }
+        public static bool IsNaughty(this string input)
+        {
+            return !input.IsNice();
+        }
+
+        public static bool IsRidiculouslyNice(this string input)
         {
             bool IsNice = false;
             IsNice =    input.HasAtLeastThreeVowels() 
@@ -76,9 +106,9 @@ namespace AdventOfCode2015
             return IsNice;
         }
 
-        public static bool IsNaughty(this string input)
+        public static bool IsRidiculouslyNaughty(this string input)
         {
-            return !input.IsNice();
+            return !input.IsRidiculouslyNice();
         }
 
         public static bool HasAtLeastThreeVowels(this string input)
@@ -115,6 +145,63 @@ namespace AdventOfCode2015
                 DoesContainALetterTwiceInARow = true;
             }
             return DoesContainALetterTwiceInARow;
+        }
+
+        public static bool DoesContainOneLetterWhichRepeatsWithExactlyOneLetterBetweenThem(this string input)
+        {
+            bool IsMatchingCondition = false;
+            foreach (Char c in input)
+            {
+                string regexPattern = String.Format("{0}[a-z]{0}", c.ToString());
+                Regex regex = new Regex(regexPattern);
+                Match match = regex.Match(input);
+                if (match.Success)
+                {
+                    IsMatchingCondition = true;
+                    break;
+                }
+            }
+            return IsMatchingCondition;
+        }
+
+        public static bool DoesContainAnyPairOfTwoLettersAppearingTwiceWithoutOverlapping (this string input)
+        {
+            bool IsMatchingCondition = false;
+            string currentPair = String.Empty;
+            foreach (Char c in input)
+            {
+                if (String.IsNullOrEmpty(currentPair))
+                {
+                    currentPair = c.ToString();
+                    continue;
+                }
+
+                currentPair = BuildPair(currentPair, c);
+
+                string regexPattern = String.Format("{0}[a-z]*{0}", currentPair); // Not optimal, regex is eager
+                Regex regex = new Regex(regexPattern);
+                Match match = regex.Match(input);
+                if (match.Success)
+                {
+                    IsMatchingCondition = true;
+                    break;
+                }
+            }
+            return IsMatchingCondition;
+        }
+
+        private static string BuildPair(string currentPair, Char c)
+        {
+            string pair = currentPair;
+            if (pair.Length == 1)
+            {
+                pair = pair + c.ToString();
+            }
+            else
+            {
+                pair = pair[1].ToString() + c.ToString();
+            }
+            return pair;
         }
 
     }

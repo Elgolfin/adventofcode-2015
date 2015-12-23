@@ -17,18 +17,18 @@ namespace AdventOfCode2015UnitTests
 
         [TestMethod]
         [TestCategory("Day05")]
-        public void ugknbfddgicrmopn_IsANiceString()
+        public void ugknbfddgicrmopn_IsARidiculousNiceString()
         {
             string input = "ugknbfddgicrmopn";
-            Assert.AreEqual(true, input.IsNice());
+            Assert.AreEqual(true, input.IsRidiculouslyNice());
         }
 
         [TestMethod]
         [TestCategory("Day05")]
-        public void aaa_IsANiceString()
+        public void aaa_IsARidiculousNiceString()
         {
             string input = "aaa";
-            Assert.AreEqual(true, input.IsNice());
+            Assert.AreEqual(true, input.IsRidiculouslyNice());
         }
 
         [TestMethod]
@@ -36,15 +36,15 @@ namespace AdventOfCode2015UnitTests
         public void jchzalrnumimnmhp_IsANaughtyString()
         {
             string input = "jchzalrnumimnmhp";
-            Assert.AreEqual(true, input.IsNaughty());
+            Assert.AreEqual(true, input.IsRidiculouslyNaughty());
         }
 
         [TestMethod]
         [TestCategory("Day05")]
-        public void jchzalrnumimnmhp_IsNotANiceString()
+        public void jchzalrnumimnmhp_IsNotARidiculousNiceString()
         {
             string input = "jchzalrnumimnmhp";
-            Assert.AreEqual(false, input.IsNice());
+            Assert.AreEqual(false, input.IsRidiculouslyNice());
         }
 
         [TestMethod]
@@ -166,6 +166,47 @@ namespace AdventOfCode2015UnitTests
             string input = "xymsledfdkjs";
             Assert.AreEqual(false, input.DoesContainALetterTwiceInARow());
         }
+
+        [TestMethod]
+        [TestCategory("Day05")]
+        public void qjhvhtzxzqqjkmpb_IsANiceString()
+        {
+            string input = "qjhvhtzxzqqjkmpb";
+            Assert.AreEqual(true, input.IsNice());
+        }
+
+        [TestMethod]
+        [TestCategory("Day05")]
+        public void xxyxx_IsANiceString()
+        {
+            string input = "xxyxx";
+            Assert.AreEqual(true, input.IsNice());
+        }
+
+        [TestMethod]
+        [TestCategory("Day05")]
+        public void uurcxstgmygtbstg_IsANaughtyString()
+        {
+            string input = "uurcxstgmygtbstg";
+            Assert.AreEqual(true, input.IsNaughty());
+        }
+
+        [TestMethod]
+        [TestCategory("Day05")]
+        public void ieodomkazucvgmuy_IsANaughtyString()
+        {
+            string input = "ieodomkazucvgmuy";
+            Assert.AreEqual(true, input.IsNaughty());
+        }
+
+        [TestMethod]
+        [TestCategory("Day05")]
+        public void ssrjgasfhdouwyoh_IsANaughtyString()
+        {
+            string input = "ssrjgasfhdouwyoh";
+            Assert.AreEqual(true, input.IsNaughty());
+        }
+        
 
     }
 }
