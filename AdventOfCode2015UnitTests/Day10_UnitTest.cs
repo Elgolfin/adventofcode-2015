@@ -7,12 +7,6 @@ namespace AdventOfCode2015UnitTests
     [TestClass]
     public class Day10_UnitTest
     {
-        //[TestCleanup]
-        //public void CleanUp()
-        //{
-
-        //}
-
         [TestMethod][TestCategory("Day10")]
         public void LookAndSay_1_1_HasALengthOf_1()
         {

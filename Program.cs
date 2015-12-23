@@ -18,7 +18,8 @@ namespace AdventOfCode2015
             //Day04.TheIdealStockingStuffer("iwrupvqb");
             //Day05.DoesntHeHaveInternElvesForThis_Part1();
             //Day05.DoesntHeHaveInternElvesForThis_Part2();
-            Day10.ElvesLookElvesSay_Part1("1321131112", 40);
+            //Day10.ElvesLookElvesSay_Part1("1321131112", 40);
+            Day10.ElvesLookElvesSay_Part1("1321131112", 50);
             //Day20.InfiniteElvesAndInfiniteHouses(34000000);
             //Day21.RPGSimulator20XXPart1();
             //Day21.RPGSimulator20XXPart2();
