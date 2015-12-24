@@ -65,6 +65,7 @@ Also, the computer is composed by:
 - a set of registers (two in our case: A and B)
 - a set of available instructions (six in our case: hlf, inc, tpl, jmp, jio, jie)
 - a cursor
+- a program listing which consists of an Array of strings, each string reprensenting a program code (i.e. *hlf a* or *jmp +21* or *jie b, -7*, etc.)
 
 You can instanciate a **Computer** Object instance by specifying a value for the register A (default is 0 if nothing is specified).
 You can load a program listing into the computer via two (2) methods: directly from a string or from a file.
