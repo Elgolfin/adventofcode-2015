@@ -6,14 +6,14 @@ Online Resources:
 
 ## Day01 Solution
 
-[Source Code][Day01SC]
+[Source Code][Day01SC] | 
 [Unit Tests][Day01UT]
 
 Nothing special except I should have put the input string in a file.
 
 ## Day02 Solution
 
-[Source Code][Day02SC]
+[Source Code][Day02SC] | 
 [Unit Tests][Day02UT]
 
 I should have put the input string in a file.
@@ -24,7 +24,7 @@ I created a **Box** class which handles all the needed calculations for the:
 
 ## Day03 Solution
 
-[Source Code][Day03SC]
+[Source Code][Day03SC] | 
 [Unit Tests][Day03UT]
 
 Once again, I should have put the input string in a file. :p
@@ -34,14 +34,14 @@ You can specify at the instanciation of the grid if you would like to use RoboSa
 
 ## Day04 Solution
 
-[Source Code][Day04SC]
+[Source Code][Day04SC] | 
 [Unit Tests][Day04UT]
 
 Nothing special. Pretty straight forward.
 
 ## Day05 Solution
 
-[Source Code][Day05SC]
+[Source Code][Day05SC] | 
 [Unit Tests][Day05UT]
 
 I used two Regex to detect if a string:
@@ -54,27 +54,27 @@ I leveraged the [Extension Methods][l2] of the C# framework.
 
 ##Day10 Solution
 
-[Source Code][Day10SC]
+[Source Code][Day10SC] | 
 [Unit Tests][Day10UT]
 
 ##Day11 Solution
 
-[Source Code][Day11SC]
+[Source Code][Day11SC] | 
 [Unit Tests][Day11UT]
 
 ##Day12 Solution
 
-[Source Code][Day12SC]
+[Source Code][Day12SC] | 
 [Unit Tests][Day12UT]
 
 ##Day20 Solution
 
-[Source Code][Day20SC]
+[Source Code][Day20SC] | 
 [Unit Tests][Day20UT]
 
 ## Day21 Solution
 
-[Source Code][Day21SC]
+[Source Code][Day21SC] | 
 [Unit Tests][Day21UT]
 
 - No TDD = No Unit Tests (to be added)
@@ -82,7 +82,7 @@ I leveraged the [Extension Methods][l2] of the C# framework.
 
 ## Day23 Solution
 
-[Source Code][Day23SC]
+[Source Code][Day23SC] | 
 [Unit Tests][Day23UT]
 
 I've put the input string in a file. :)
