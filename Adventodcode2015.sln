@@ -18,6 +18,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "inputs", "inputs", "{850C87
 		.travis.yml = .travis.yml
 		day05.txt = day05.txt
 		day12.txt = day12.txt
+		day23.txt = day23.txt
 	EndProjectSection
 EndProject
 Global
