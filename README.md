@@ -111,7 +111,7 @@ The program loaded within the computer can be executed via the **Run** method.
 [l2]:https://msdn.microsoft.com/en-CA/library/bb383977.aspx
 [regex101]:https://regex101.com/
 
-[Day02SC]:https://github.com/Elgolfin/adventofcode-2015/blob/master/Day01.cs
+[Day01SC]:https://github.com/Elgolfin/adventofcode-2015/blob/master/Day01.cs
 [Day02SC]:https://github.com/Elgolfin/adventofcode-2015/blob/master/Day02.cs
 [Day03SC]:https://github.com/Elgolfin/adventofcode-2015/blob/master/Day03.cs
 [Day04SC]:https://github.com/Elgolfin/adventofcode-2015/blob/master/Day04.cs
@@ -127,7 +127,7 @@ The program loaded within the computer can be executed via the **Run** method.
 
 
 
-[Day02UT]:https://github.com/Elgolfin/adventofcode-2015/blob/master/AdventOfCode2015UnitTests/Day01_UnitTest.cs
+[Day01UT]:https://github.com/Elgolfin/adventofcode-2015/blob/master/AdventOfCode2015UnitTests/Day01_UnitTest.cs
 [Day02UT]:https://github.com/Elgolfin/adventofcode-2015/blob/master/AdventOfCode2015UnitTests/Day02_UnitTest.cs
 [Day03UT]:https://github.com/Elgolfin/adventofcode-2015/blob/master/AdventOfCode2015UnitTests/Day03_UnitTest.cs
 [Day04UT]:https://github.com/Elgolfin/adventofcode-2015/blob/master/AdventOfCode2015UnitTests/Day04_UnitTest.cs
