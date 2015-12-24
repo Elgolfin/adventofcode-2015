@@ -6,9 +6,15 @@ Online Resources:
 
 ## Day01 Solution
 
+[Source Code][Day01SC]
+[Unit Tests][Day01UT]
+
 Nothing special except I should have put the input string in a file.
 
 ## Day02 Solution
+
+[Source Code][Day02SC]
+[Unit Tests][Day02UT]
 
 I should have put the input string in a file.
 
@@ -18,6 +24,9 @@ I created a **Box** class which handles all the needed calculations for the:
 
 ## Day03 Solution
 
+[Source Code][Day03SC]
+[Unit Tests][Day03UT]
+
 Once again, I should have put the input string in a file. :p
 
 I created a **HousesGrid** object which handles the positions of both Santa and RoboSanta in the grid. It also handles who should move during each turn.
@@ -25,9 +34,15 @@ You can specify at the instanciation of the grid if you would like to use RoboSa
 
 ## Day04 Solution
 
+[Source Code][Day04SC]
+[Unit Tests][Day04UT]
+
 Nothing special. Pretty straight forward.
 
 ## Day05 Solution
+
+[Source Code][Day05SC]
+[Unit Tests][Day05UT]
 
 I used two Regex to detect if a string:
 - does contain a letter twice in a row
@@ -39,16 +54,36 @@ I leveraged the [Extension Methods][l2] of the C# framework.
 
 ##Day10 Solution
 
+[Source Code][Day10SC]
+[Unit Tests][Day10UT]
+
 ##Day11 Solution
+
+[Source Code][Day11SC]
+[Unit Tests][Day11UT]
 
 ##Day12 Solution
 
+[Source Code][Day12SC]
+[Unit Tests][Day12UT]
+
+##Day20 Solution
+
+[Source Code][Day20SC]
+[Unit Tests][Day20UT]
+
 ## Day21 Solution
+
+[Source Code][Day21SC]
+[Unit Tests][Day21UT]
 
 - No TDD = No Unit Tests (to be added)
 - Refactoring needed
 
 ## Day23 Solution
+
+[Source Code][Day23SC]
+[Unit Tests][Day23UT]
 
 I've put the input string in a file. :)
 
@@ -75,3 +110,33 @@ The program loaded within the computer can be executed via the **Run** method.
 [l1]:http://adventofcode.com/
 [l2]:https://msdn.microsoft.com/en-CA/library/bb383977.aspx
 [regex101]:https://regex101.com/
+
+[Day02SC]:https://github.com/Elgolfin/adventofcode-2015/blob/master/Day01.cs
+[Day02SC]:https://github.com/Elgolfin/adventofcode-2015/blob/master/Day02.cs
+[Day03SC]:https://github.com/Elgolfin/adventofcode-2015/blob/master/Day03.cs
+[Day04SC]:https://github.com/Elgolfin/adventofcode-2015/blob/master/Day04.cs
+[Day05SC]:https://github.com/Elgolfin/adventofcode-2015/blob/master/Day05.cs
+
+[Day10SC]:https://github.com/Elgolfin/adventofcode-2015/blob/master/Day10.cs
+[Day11SC]:https://github.com/Elgolfin/adventofcode-2015/blob/master/Day11.cs
+[Day12SC]:https://github.com/Elgolfin/adventofcode-2015/blob/master/Day12.cs
+
+[Day20SC]:https://github.com/Elgolfin/adventofcode-2015/blob/master/Day20.cs
+[Day21SC]:https://github.com/Elgolfin/adventofcode-2015/blob/master/Day21.cs
+[Day23SC]:https://github.com/Elgolfin/adventofcode-2015/blob/master/Day23.cs
+
+
+
+[Day02UT]:https://github.com/Elgolfin/adventofcode-2015/blob/master/AdventOfCode2015UnitTests/Day01_UnitTest.cs
+[Day02UT]:https://github.com/Elgolfin/adventofcode-2015/blob/master/AdventOfCode2015UnitTests/Day02_UnitTest.cs
+[Day03UT]:https://github.com/Elgolfin/adventofcode-2015/blob/master/AdventOfCode2015UnitTests/Day03_UnitTest.cs
+[Day04UT]:https://github.com/Elgolfin/adventofcode-2015/blob/master/AdventOfCode2015UnitTests/Day04_UnitTest.cs
+[Day05UT]:https://github.com/Elgolfin/adventofcode-2015/blob/master/AdventOfCode2015UnitTests/Day05_UnitTest.cs
+
+[Day10UT]:https://github.com/Elgolfin/adventofcode-2015/blob/master/AdventOfCode2015UnitTests/Day10_UnitTest.cs
+[Day11UT]:https://github.com/Elgolfin/adventofcode-2015/blob/master/AdventOfCode2015UnitTests/Day11_UnitTest.cs
+[Day12UT]:https://github.com/Elgolfin/adventofcode-2015/blob/master/AdventOfCode2015UnitTests/Day12_UnitTest.cs
+
+[Day20UT]:https://github.com/Elgolfin/adventofcode-2015/blob/master/AdventOfCode2015UnitTests/Day20_UnitTest.cs
+[Day21UT]:https://github.com/Elgolfin/adventofcode-2015/blob/master/AdventOfCode2015UnitTests/Day21_UnitTest.cs
+[Day23UT]:https://github.com/Elgolfin/adventofcode-2015/blob/master/AdventOfCode2015UnitTests/Day23_UnitTest.cs
