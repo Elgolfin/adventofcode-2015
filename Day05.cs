@@ -113,63 +113,40 @@ namespace AdventOfCode2015
 
         public static bool HasAtLeastThreeVowels(this string input)
         {
-            bool HasAtLeastThreeVowels = false;
-            Regex regex = new Regex(@"([^aeiou]*[aeiou]){3,}");
-            Match match = regex.Match(input);
-            if (match.Success)
-            {
-                HasAtLeastThreeVowels = true;
-            }
-            return HasAtLeastThreeVowels;
+            string pattern = @"([^aeiou]*[aeiou]){3,}";
+            return input.Match(pattern);
         }
 
         public static bool DoesNotContain_ab_cd_pq_xy(this string input)
         {
-            bool DoesNotContainSpecificStrings = true;
-            Regex regex = new Regex(@"(ab|cd|pq|xy)");
-            Match match = regex.Match(input);
-            if (match.Success)
-            {
-                DoesNotContainSpecificStrings = false;
-            }
-            return DoesNotContainSpecificStrings;
+            string pattern = @"(ab|cd|pq|xy)";
+            return !input.Match(pattern);
         }
 
         public static bool DoesContainALetterTwiceInARow(this string input)
         {
-            bool DoesContainALetterTwiceInARow = false;
-            Regex regex = new Regex(@"(aa|bb|cc|dd|ee|ff|gg|hh|ii|jj|kk|ll|mm|nn|oo|pp|qq|rr|ss|tt|uu|vv|ww|xx|yy|zz)"); // Optimal Regx but works only for alphabetical characters
-            //Regex regex = new Regex(@"([a-z])\1"); // Not optimal, Regex is greedy
-            Match match = regex.Match(input);
-            if (match.Success)
-            {
-                DoesContainALetterTwiceInARow = true;
-            }
-            return DoesContainALetterTwiceInARow;
+            string pattern = @"(aa|bb|cc|dd|ee|ff|gg|hh|ii|jj|kk|ll|mm|nn|oo|pp|qq|rr|ss|tt|uu|vv|ww|xx|yy|zz)"; // Optimal Regx but works only for alphabetical characters
+            //string pattern = @"([a-z])\1"; // Not optimal, Regex is greedy
+            return input.Match(pattern);
         }
 
         public static bool DoesContainOneLetterWhichRepeatsWithExactlyOneLetterBetweenThem(this string input)
         {
-            bool IsMatchingCondition = false;
-
             string pattern = @"(.).\1";
-            Regex regex = new Regex(pattern);
-                                                                                                                         //Regex regex = new Regex(@"([a-z])\1"); // Not optimal, Regex is greedy
-            Match match = regex.Match(input);
-            if (match.Success)
-            {
-                IsMatchingCondition = true;
-            }
-
-            return IsMatchingCondition;
+            return input.Match(pattern);
         }
 
         public static bool DoesContainAnyPairOfTwoLettersAppearingTwiceWithoutOverlapping (this string input)
         {
+            string pattern = @"([a-z]{2})[a-z]*\1"; // Not optimal, Regex is greedy
+            return input.Match(pattern);
+        }
+
+        public static bool Match (this string input, string pattern)
+        {
             bool IsMatchingCondition = false;
 
-            string pattern = @"([a-z]{2})[a-z]*\1"; // Not optimal, Regex is greedy
-            Regex regex = new Regex(pattern); 
+            Regex regex = new Regex(pattern);
             Match match = regex.Match(input);
             if (match.Success)
             {
