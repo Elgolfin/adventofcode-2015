@@ -106,6 +106,14 @@ You can instanciate a **Computer** Object instance by specifying a value for the
 You can load a program listing into the computer via two (2) methods: directly from a string or from a file.
 The program loaded within the computer can be executed via the **Run** method.
 
+## Day25 Solution
+
+[Source Code][Day25SC] | 
+[Unit Tests][Day25UT]
+
+- Use of Delegate Func
+- Use of yield
+
 
 [l1]:http://adventofcode.com/
 [l2]:https://msdn.microsoft.com/en-CA/library/bb383977.aspx
@@ -124,6 +132,7 @@ The program loaded within the computer can be executed via the **Run** method.
 [Day20SC]:https://github.com/Elgolfin/adventofcode-2015/blob/master/Day20.cs
 [Day21SC]:https://github.com/Elgolfin/adventofcode-2015/blob/master/Day21.cs
 [Day23SC]:https://github.com/Elgolfin/adventofcode-2015/blob/master/Day23.cs
+[Day25SC]:https://github.com/Elgolfin/adventofcode-2015/blob/master/Day25.cs
 
 
 
@@ -140,3 +149,4 @@ The program loaded within the computer can be executed via the **Run** method.
 [Day20UT]:https://github.com/Elgolfin/adventofcode-2015/blob/master/AdventOfCode2015UnitTests/Day20_UnitTest.cs
 [Day21UT]:https://github.com/Elgolfin/adventofcode-2015/blob/master/AdventOfCode2015UnitTests/Day21_UnitTest.cs
 [Day23UT]:https://github.com/Elgolfin/adventofcode-2015/blob/master/AdventOfCode2015UnitTests/Day23_UnitTest.cs
+[Day25UT]:https://github.com/Elgolfin/adventofcode-2015/blob/master/AdventOfCode2015UnitTests/Day23_UnitTest.cs
