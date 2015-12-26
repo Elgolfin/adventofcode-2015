@@ -18,6 +18,7 @@ namespace AdventOfCode2015
             //Day04.TheIdealStockingStuffer("iwrupvqb");
             //Day05.DoesntHeHaveInternElvesForThis_Part1();
             //Day05.DoesntHeHaveInternElvesForThis_Part2();
+            Day06.ProbablyAFireHazard_Part1();
             //Day10.ElvesLookElvesSay_Part1("1321131112", 40);
             //Day10.ElvesLookElvesSay_Part1("1321131112", 50);
             //Day11.CorporatePolicy_Part1("hepxcrrq");
@@ -29,7 +30,7 @@ namespace AdventOfCode2015
             //Day21.RPGSimulator20XXPart2();
             //Day23.OpeningTheTuringLock_Part1();
             //Day23.OpeningTheTuringLock_Part2();
-            Day25.LetItSnow_Part1();
+            //Day25.LetItSnow_Part1();
             Console.ReadKey();
         }
     }

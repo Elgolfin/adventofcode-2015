@@ -151,58 +151,32 @@ namespace AdventOfCode2015
         public static bool DoesContainOneLetterWhichRepeatsWithExactlyOneLetterBetweenThem(this string input)
         {
             bool IsMatchingCondition = false;
-            foreach (Char c in input)
+
+            string pattern = @"(.).\1";
+            Regex regex = new Regex(pattern);
+                                                                                                                         //Regex regex = new Regex(@"([a-z])\1"); // Not optimal, Regex is greedy
+            Match match = regex.Match(input);
+            if (match.Success)
             {
-                string regexPattern = String.Format("{0}[a-z]{0}", c.ToString());
-                Regex regex = new Regex(regexPattern);
-                Match match = regex.Match(input);
-                if (match.Success)
-                {
-                    IsMatchingCondition = true;
-                    break;
-                }
+                IsMatchingCondition = true;
             }
+
             return IsMatchingCondition;
         }
 
         public static bool DoesContainAnyPairOfTwoLettersAppearingTwiceWithoutOverlapping (this string input)
         {
             bool IsMatchingCondition = false;
-            string currentPair = String.Empty;
-            foreach (Char c in input)
+
+            string pattern = @"([a-z]{2})[a-z]*\1"; // Not optimal, Regex is greedy
+            Regex regex = new Regex(pattern); 
+            Match match = regex.Match(input);
+            if (match.Success)
             {
-                if (String.IsNullOrEmpty(currentPair))
-                {
-                    currentPair = c.ToString();
-                    continue;
-                }
-
-                currentPair = BuildPair(currentPair, c);
-
-                string regexPattern = String.Format("{0}[a-z]*{0}", currentPair); // Not optimal, regex is greedy
-                Regex regex = new Regex(regexPattern);
-                Match match = regex.Match(input);
-                if (match.Success)
-                {
-                    IsMatchingCondition = true;
-                    break;
-                }
+                IsMatchingCondition = true;
             }
+
             return IsMatchingCondition;
-        }
-
-        private static string BuildPair(string currentPair, Char c)
-        {
-            string pair = currentPair;
-            if (pair.Length == 1)
-            {
-                pair = pair + c.ToString();
-            }
-            else
-            {
-                pair = pair[1].ToString() + c.ToString();
-            }
-            return pair;
         }
 
     }

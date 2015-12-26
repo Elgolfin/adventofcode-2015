@@ -206,7 +206,23 @@ namespace AdventOfCode2015UnitTests
             string input = "ssrjgasfhdouwyoh";
             Assert.AreEqual(true, input.IsNaughty());
         }
-        
+
+        [TestMethod]
+        [TestCategory("Day05")]
+        public void aaa_DoesContainOneLetterWhichRepeatsWithExactlyOneLetterBetweenThem()
+        {
+            string input = "aaa";
+            Assert.AreEqual(true, input.DoesContainOneLetterWhichRepeatsWithExactlyOneLetterBetweenThem());
+        }
+
+        [TestMethod]
+        [TestCategory("Day05")]
+        public void aya_DoesContainOneLetterWhichRepeatsWithExactlyOneLetterBetweenThem()
+        {
+            string input = "aya";
+            Assert.AreEqual(true, input.DoesContainOneLetterWhichRepeatsWithExactlyOneLetterBetweenThem());
+        }
+
 
     }
 }

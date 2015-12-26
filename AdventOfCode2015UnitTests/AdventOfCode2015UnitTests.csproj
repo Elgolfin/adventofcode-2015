@@ -52,6 +52,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Day06_UnitTest.cs" />
     <Compile Include="Day25_UnitTest.cs" />
     <Compile Include="Day23_UnitTest.cs" />
     <Compile Include="Day12_UnitTest.cs" />
