@@ -23,11 +23,12 @@ namespace AdventOfCode2015
             //Day11.CorporatePolicy_Part1("hepxcrrq");
             //Day11.CorporatePolicy_Part2("hepxcrrq");
             //Day12.JSAbacusFramework_io_Part1();
+            Day12.JSAbacusFramework_io_Part2();
             //Day20.InfiniteElvesAndInfiniteHouses(34000000);
             //Day21.RPGSimulator20XXPart1();
             //Day21.RPGSimulator20XXPart2();
-            Day23.OpeningTheTuringLock_Part1();
-            Day23.OpeningTheTuringLock_Part2();
+            //Day23.OpeningTheTuringLock_Part1();
+            //Day23.OpeningTheTuringLock_Part2();
             Console.ReadKey();
         }
     }
