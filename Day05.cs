@@ -88,7 +88,7 @@ namespace AdventOfCode2015
         public static bool IsNice(this string input)
         {
             bool IsNice = false;
-            IsNice = input.DoesContainAnyPairOfTwoLettersAppearingTwiceWithoutOverlapping()
+            IsNice =    input.DoesContainAnyPairOfTwoLettersAppearingTwiceWithoutOverlapping()
                      && input.DoesContainOneLetterWhichRepeatsWithExactlyOneLetterBetweenThem();
             return IsNice;
         }
