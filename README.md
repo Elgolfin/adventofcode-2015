@@ -63,7 +63,7 @@ I've put the input string in a file. :)
 Nota Bene: I could have done a solution faster than the one I developped. I wanted to produce a solution based on an simple, extensible Object model.
 Indeed, I've developped it on a TDD way and I've included many unit tests.
 
-Therefore, I used the following Object model to represent how the computer works:
+Therefore, I used the following Object model to represent how the system works:
 - an abstract **LightsGrid** class which will be the base class (only three methos are declared abstract: TurnOnLights, TurnOffLights, ToggleLights)
 - a **BinaryLightsGrid** class which implements the three methods based on the Part 1 behavior (a light is on or off)
 - a **GradientLightsGrid** class which implements the three methods based on the Part 1 behavior (a light gets a specific brightness)
