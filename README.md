@@ -64,11 +64,11 @@ Nota Bene: I could have done a solution faster than the one I developped. I want
 Indeed, I've developped it on a TDD way and I've included many unit tests.
 
 Therefore, I used the following Object model to represent how the system works:
-- an abstract **LightsGrid** class which will be the base class (only three methods are declared abstract: TurnOnLights, TurnOffLights, ToggleLights)
+- an abstract **LightsGrid** class which will be the base class (only three methods are declared abstract: *TurnOnLights*, *TurnOffLights*, *ToggleLights*)
 - a **BinaryLightsGrid** class which implements the three methods based on the Part 1 behavior (a light is on or off)
 - a **GradientLightsGrid** class which implements the three methods based on the Part 1 behavior (a light gets a specific brightness)
 
-I could also have put the abstract method within an Interface but I did not see the needs at this time. I wanted to produce an elegant solution without overengineering it. It could have been part of a future refactoring if the puzzle had evolved with a more complex behavior in an hypothetical but currently unexisting part 3.
+I could also have put the abstract method within an Interface but I did not see the needs at this time. I wanted to produce an elegant solution without overengineering it. It could have been part of a future refactoring if the puzzle had evolved with a more complex behavior with an hypothetical but currently unexisting part 3.
 
 ##Day10 Solution
 
