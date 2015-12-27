@@ -60,7 +60,7 @@ namespace AdventOfCode2015
                     if (line.IsRidiculouslyNice())
                     {
                         countNiceStrings++;
-                        Console.WriteLine(line);
+                        //Console.WriteLine(line);
                     }
                 }
             }
@@ -78,7 +78,7 @@ namespace AdventOfCode2015
                     if (line.IsNice())
                     {
                         countNiceStrings++;
-                        Console.WriteLine(line);
+                        //Console.WriteLine(line);
                     }
                 }
             }
@@ -119,14 +119,13 @@ namespace AdventOfCode2015
 
         public static bool DoesNotContain_ab_cd_pq_xy(this string input)
         {
-            string pattern = @"(ab|cd|pq|xy)";
+            string pattern = @"ab|cd|pq|xy";
             return !input.Match(pattern);
         }
 
         public static bool DoesContainALetterTwiceInARow(this string input)
         {
-            string pattern = @"(aa|bb|cc|dd|ee|ff|gg|hh|ii|jj|kk|ll|mm|nn|oo|pp|qq|rr|ss|tt|uu|vv|ww|xx|yy|zz)"; // Optimal Regx but works only for alphabetical characters
-            //string pattern = @"([a-z])\1"; // Not optimal, Regex is greedy
+            string pattern = @"([a-z])\1";
             return input.Match(pattern);
         }
 
