@@ -25,7 +25,7 @@ namespace AdventOfCode2015
     ///
     /// You will not encounter any strings containing numbers.
     ///
-    /// What is the sum of all numbers in the document?
+    /// What is the sum of all numbers in the document? 119433
     //
     /// --- Part Two ---
     //
@@ -37,6 +37,8 @@ namespace AdventOfCode2015
     ///    [1,{"c":"red","b":2},3] now has a sum of 4, because the middle object is ignored.
     ///    {"d":"red","e":[1,2,3,4],"f":5} now has a sum of 0, because the entire structure is ignored.
     ///    [1, "red", 5] has a sum of 6, because "red" in an array has no effect.
+    ///    
+    ///  68466
     /// </summary>
     public static class Day12
     {

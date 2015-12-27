@@ -51,7 +51,7 @@ namespace AdventOfCode2015
     ///
     /// "Now remember", the voice continues, "that's not even all of the first few numbers; for example, you're missing the one at 7,1 that would come before 6,2. But, it should be enough to let your-- oh, it's time for lunch! Bye!" The call disconnects.
     ///
-    /// Santa looks nervous.Your puzzle input contains the message on the machine's console. What code do you give the machine?
+    /// Santa looks nervous.Your puzzle input contains the message on the machine's console. What code do you give the machine? 8997277
     ///
     /// </summary>
     public static class Day25

@@ -27,7 +27,7 @@ namespace AdventOfCode2015
     ///    haegwjzuvuyypxyu is naughty because it contains the string xy.
     ///    dvszwmarrgswjxmb is naughty because it contains only one vowel.
     ///
-    /// How many strings are nice?
+    /// How many strings are nice? 258
     ///
     /// --- Part Two ---
     ///
@@ -45,7 +45,7 @@ namespace AdventOfCode2015
     ///    uurcxstgmygtbstg is naughty because it has a pair(tg) but no repeat with a single letter between them.
     ///    ieodomkazucvgmuy is naughty because it has a repeating letter with one between(odo), but no pair that appears twice.
     ///
-    /// How many strings are nice under these new rules?
+    /// How many strings are nice under these new rules? 53
     /// </summary>
     public static class Day05
     {

@@ -19,6 +19,7 @@ namespace AdventOfCode2015
             //Day05.DoesntHeHaveInternElvesForThis_Part1();
             //Day05.DoesntHeHaveInternElvesForThis_Part2();
             Day06.ProbablyAFireHazard_Part1();
+            Day06.ProbablyAFireHazard_Part2();
             //Day10.ElvesLookElvesSay_Part1("1321131112", 40);
             //Day10.ElvesLookElvesSay_Part1("1321131112", 50);
             //Day11.CorporatePolicy_Part1("hepxcrrq");
