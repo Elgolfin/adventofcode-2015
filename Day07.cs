@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -73,7 +74,7 @@ namespace AdventOfCode2015
         private static void SomeAssemblyRequired(string filePath)
         {
             Circuit bobbyCircuit = new Circuit(new MyOperators().Operators);
-            Dictionary<string, string> circuit1 = new Dictionary<string, string>();
+            Dictionary<string, string> circuit = new Dictionary<string, string>();
             Dictionary<string, string> circuit2 = new Dictionary<string, string>();
 
 
@@ -84,42 +85,24 @@ namespace AdventOfCode2015
                 while (sr.Peek() >= 0)
                 {
                     string line = sr.ReadLine();
-                    string pattern = @"->\s*(?<wire>[a-z])$";
+                    string pattern = @"->\s*(?<wire>[a-z]+)$";
                     Regex regex = new Regex(pattern);
                     Match match = regex.Match(line);
                     if (match.Success)
                     {
                         string wire = match.Groups["wire"].Value;
-                        circuit1.Add(wire, line);
-                    }
-                    else
-                    {
-                        pattern = @"->\s*(?<wire>[a-z][a-z])$";
-                        regex = new Regex(pattern);
-                        match = regex.Match(line);
-                        if (match.Success)
-                        {
-                            string wire = match.Groups["wire"].Value;
-                            circuit2.Add(wire, line);
-                        }
+                        circuit.Add(wire, line);
                     }
                 }
             }
 
-            // TODO build a custom comparer to avoid doing two sort (one for one letter, and the other one for two letters)
-            List<string> wires1 = circuit1.Keys.ToList();
+            List<string> wires = circuit.Keys.ToList();
             List<string> wires2 = circuit2.Keys.ToList();
-            wires1.Sort();
-            foreach (string wire in wires1)
+            IComparer<string> wireNameComparer = new WireNameComparer();
+            wires.Sort(wireNameComparer);
+            foreach (string wire in wires)
             {
-                string line = circuit1[wire];
-                ExecuteOperation(bobbyCircuit, line);
-            }
-            wires2.Sort();
-            foreach (string wire in wires2)
-            {
-
-                string line = circuit2[wire];
+                string line = circuit[wire];
                 ExecuteOperation(bobbyCircuit, line);
             }
 
@@ -151,7 +134,7 @@ namespace AdventOfCode2015
                     bobbyCircuit.Wires[wire].Name = wire;
                 }
 
-                // No op, it is a pointer
+                // No op, it is a wire which points to another wire
                 if (String.IsNullOrEmpty(op))
                 {
                     bobbyCircuit.Wires[wire] = a;
@@ -159,6 +142,7 @@ namespace AdventOfCode2015
                 else
                 {
                     bobbyCircuit.Operators[op].InputA = a.Value;
+                    // TODO: fix this
                     // VERY UGLY!
                     if (op == "NOT") {
                         bobbyCircuit.Operators[op].InputA = b.Value;
@@ -196,6 +180,27 @@ namespace AdventOfCode2015
             return input;
         }
 
+    }
+
+    public class WireNameComparer : IComparer<string>
+    {
+        int IComparer<string>.Compare(string s1, string s2)
+        {
+            int compareToResult = 0;
+            if (s1.Length < s2.Length)
+            {
+                compareToResult = - 1;
+            }
+            if (s1.Length > s2.Length)
+            {
+                compareToResult = 1;
+            }
+            if (s1.Length == s2.Length)
+            {
+                compareToResult = s1.CompareTo(s2);
+            }
+            return compareToResult;
+        }
     }
 
     public class MyOperators
