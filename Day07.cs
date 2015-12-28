@@ -109,8 +109,9 @@ namespace AdventOfCode2015
             Console.WriteLine("The value of wire a is: {0}", bobbyCircuit.Wires["a"].Value);
         }
 
-        
 
+
+        // TODO add Unit Tests for each possible combinaison of operation
         private static void ExecuteOperation (Circuit bobbyCircuit, string line)
         {
             string pattern = @"((?<a1>[0-9]+)|(?<a2>[a-z]+))?\s*(?<operator>AND|OR|RSHIFT|LSHIFT|NOT)?\s*((?<b1>[0-9]+)|(?<b2>[a-z]+))?\s*->\s*(?<result>[a-z]+)";
@@ -123,10 +124,17 @@ namespace AdventOfCode2015
                 Wire a;
                 Wire b;
 
-                a = GetCircuitInputWire(bobbyCircuit, match, "a1", "a2");
-                b = GetCircuitInputWire(bobbyCircuit, match, "b1", "b2");
+                a = GetCircuitInputWire(bobbyCircuit, match, "a1", "a2"); // a might be null
+                b = GetCircuitInputWire(bobbyCircuit, match, "b1", "b2"); // b will never be null
                 wire = match.Groups["result"].Value;
                 op = match.Groups["operator"].Value;
+
+                // The if statement below will handle operator with an unique input (at its right)
+                // i.e. NOT h -> i
+                if (!String.IsNullOrEmpty(op) && a == null)
+                {
+                    a = b;
+                }
 
                 if (!bobbyCircuit.Wires.ContainsKey(wire))
                 {
@@ -142,11 +150,6 @@ namespace AdventOfCode2015
                 else
                 {
                     bobbyCircuit.Operators[op].InputA = a.Value;
-                    // TODO: fix this
-                    // VERY UGLY!
-                    if (op == "NOT") {
-                        bobbyCircuit.Operators[op].InputA = b.Value;
-                    }
                     bobbyCircuit.Operators[op].InputB = b.Value;
                     bobbyCircuit.Wires[wire].Value = bobbyCircuit.Operators[op].Execute();
                 }
@@ -159,6 +162,10 @@ namespace AdventOfCode2015
             Wire input;
             string s;
             uint u;
+
+            if (String.IsNullOrEmpty(match.Groups[name1].Value) && String.IsNullOrEmpty(match.Groups[name2].Value))
+            { return null; }
+
             UInt32.TryParse(match.Groups[name1].Value, out u);
             s = match.Groups[name2].Value;
             if (!String.IsNullOrEmpty(s))
