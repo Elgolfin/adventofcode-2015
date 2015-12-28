@@ -75,6 +75,11 @@ I could also have put the abstract method within an Interface but I did not see 
 [Source Code][Day07SC] | 
 [Unit Tests][Day07UT]
 
+## Day08 Solution
+
+[Source Code][Day08SC] | 
+[Unit Tests][Day08UT]
+
 ##Day10 Solution
 
 [Source Code][Day10SC] | 
@@ -149,6 +154,7 @@ The program loaded within the computer can be executed via the **Run** method.
 [Day05SC]:https://github.com/Elgolfin/adventofcode-2015/blob/master/Day05.cs
 [Day06SC]:https://github.com/Elgolfin/adventofcode-2015/blob/master/Day06.cs
 [Day07SC]:https://github.com/Elgolfin/adventofcode-2015/blob/master/Day07.cs
+[Day08SC]:https://github.com/Elgolfin/adventofcode-2015/blob/master/Day08.cs
 
 [Day10SC]:https://github.com/Elgolfin/adventofcode-2015/blob/master/Day10.cs
 [Day11SC]:https://github.com/Elgolfin/adventofcode-2015/blob/master/Day11.cs
@@ -168,6 +174,7 @@ The program loaded within the computer can be executed via the **Run** method.
 [Day05UT]:https://github.com/Elgolfin/adventofcode-2015/blob/master/AdventOfCode2015UnitTests/Day05_UnitTest.cs
 [Day06UT]:https://github.com/Elgolfin/adventofcode-2015/blob/master/AdventOfCode2015UnitTests/Day06_UnitTest.cs
 [Day07UT]:https://github.com/Elgolfin/adventofcode-2015/blob/master/AdventOfCode2015UnitTests/Day07_UnitTest.cs
+[Day08UT]:https://github.com/Elgolfin/adventofcode-2015/blob/master/AdventOfCode2015UnitTests/Day08_UnitTest.cs
 
 [Day10UT]:https://github.com/Elgolfin/adventofcode-2015/blob/master/AdventOfCode2015UnitTests/Day10_UnitTest.cs
 [Day11UT]:https://github.com/Elgolfin/adventofcode-2015/blob/master/AdventOfCode2015UnitTests/Day11_UnitTest.cs

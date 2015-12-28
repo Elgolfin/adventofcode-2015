@@ -193,6 +193,10 @@ namespace AdventOfCode2015
 
     }
 
+    /// <summary>
+    /// Implements a custom IComparer to sort alphabtically wire names as follow: a, b, c, ..., ab, etc.
+    /// (Default sorting is alphabetical as follow: a, aa, ab, ..., b, ba, etc.)
+    /// </summary>
     public class WireNameComparer : IComparer<string>
     {
         int IComparer<string>.Compare(string s1, string s2)
