@@ -70,6 +70,11 @@ Therefore, I used the following Object model to represent how the system works:
 
 I could also have put the abstract method within an Interface but I did not see the needs at this time. I wanted to produce an elegant solution without overengineering it. It could have been part of a future refactoring if the puzzle had evolved with a more complex behavior with an hypothetical but currently unexisting part 3.
 
+## Day07 Solution
+
+[Source Code][Day07SC] | 
+[Unit Tests][Day07UT]
+
 ##Day10 Solution
 
 [Source Code][Day10SC] | 
@@ -143,6 +148,7 @@ The program loaded within the computer can be executed via the **Run** method.
 [Day04SC]:https://github.com/Elgolfin/adventofcode-2015/blob/master/Day04.cs
 [Day05SC]:https://github.com/Elgolfin/adventofcode-2015/blob/master/Day05.cs
 [Day06SC]:https://github.com/Elgolfin/adventofcode-2015/blob/master/Day06.cs
+[Day07SC]:https://github.com/Elgolfin/adventofcode-2015/blob/master/Day07.cs
 
 [Day10SC]:https://github.com/Elgolfin/adventofcode-2015/blob/master/Day10.cs
 [Day11SC]:https://github.com/Elgolfin/adventofcode-2015/blob/master/Day11.cs
@@ -161,6 +167,7 @@ The program loaded within the computer can be executed via the **Run** method.
 [Day04UT]:https://github.com/Elgolfin/adventofcode-2015/blob/master/AdventOfCode2015UnitTests/Day04_UnitTest.cs
 [Day05UT]:https://github.com/Elgolfin/adventofcode-2015/blob/master/AdventOfCode2015UnitTests/Day05_UnitTest.cs
 [Day06UT]:https://github.com/Elgolfin/adventofcode-2015/blob/master/AdventOfCode2015UnitTests/Day06_UnitTest.cs
+[Day07UT]:https://github.com/Elgolfin/adventofcode-2015/blob/master/AdventOfCode2015UnitTests/Day07_UnitTest.cs
 
 [Day10UT]:https://github.com/Elgolfin/adventofcode-2015/blob/master/AdventOfCode2015UnitTests/Day10_UnitTest.cs
 [Day11UT]:https://github.com/Elgolfin/adventofcode-2015/blob/master/AdventOfCode2015UnitTests/Day11_UnitTest.cs
