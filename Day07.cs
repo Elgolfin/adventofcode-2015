@@ -9,6 +9,13 @@ using System.Text.RegularExpressions;
 
 namespace AdventOfCode2015
 {
+    
+    // TODO Refactoring needed:
+    // - Documentation summary to be formatted
+    // - ExecuteOperation method should be in the Circuit class
+    // - Parsing all the operations and put them in the right order should be in the Circuit class as well
+    // - add a Get/SetWireValue method in the Circuit class to not manipulate directly the wires collection and so encapsulate the logic within those methods
+    
     /// <summary>
     /// --- Day 7: Some Assembly Required ---
 
@@ -74,9 +81,7 @@ namespace AdventOfCode2015
         private static void SomeAssemblyRequired(string filePath)
         {
             Circuit bobbyCircuit = new Circuit(new MyOperators().Operators);
-            Dictionary<string, string> circuit = new Dictionary<string, string>();
-            Dictionary<string, string> circuit2 = new Dictionary<string, string>();
-
+            Dictionary<string, string> circuitOperations = new Dictionary<string, string>();
 
             Queue<string> operations = new Queue<string>();
 
@@ -91,18 +96,17 @@ namespace AdventOfCode2015
                     if (match.Success)
                     {
                         string wire = match.Groups["wire"].Value;
-                        circuit.Add(wire, line);
+                        circuitOperations.Add(wire, line);
                     }
                 }
             }
 
-            List<string> wires = circuit.Keys.ToList();
-            List<string> wires2 = circuit2.Keys.ToList();
+            List<string> wires = circuitOperations.Keys.ToList();
             IComparer<string> wireNameComparer = new WireNameComparer();
             wires.Sort(wireNameComparer);
             foreach (string wire in wires)
             {
-                string line = circuit[wire];
+                string line = circuitOperations[wire];
                 ExecuteOperation(bobbyCircuit, line);
             }
 
