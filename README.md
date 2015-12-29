@@ -80,6 +80,8 @@ I could also have put the abstract method within an Interface but I did not see 
 [Source Code][Day08SC] | 
 [Unit Tests][Day08UT]
 
+Nothing special. Pretty straight forward.
+
 ##Day10 Solution
 
 [Source Code][Day10SC] | 
