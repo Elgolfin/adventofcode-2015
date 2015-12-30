@@ -20,8 +20,8 @@ namespace AdventOfCode2015
             //Day05.DoesntHeHaveInternElvesForThis_Part2();
             //Day06.ProbablyAFireHazard_Part1();
             //Day06.ProbablyAFireHazard_Part2();
-            Day07.SomeAssemblyRequired_Part1();
-            Day07.SomeAssemblyRequired_Part2();
+            //Day07.SomeAssemblyRequired_Part1();
+            //Day07.SomeAssemblyRequired_Part2();
             //Day08.Matchsticks_Part1();
             //Day08.Matchsticks_Part2();
             //Day10.ElvesLookElvesSay_Part1("1321131112", 40);
@@ -30,6 +30,7 @@ namespace AdventOfCode2015
             //Day11.CorporatePolicy_Part2("hepxcrrq");
             //Day12.JSAbacusFramework_io_Part1();
             //Day12.JSAbacusFramework_io_Part2();
+            Day14.ReindeerOlympics_Part1();
             //Day20.InfiniteElvesAndInfiniteHouses(34000000);
             //Day21.RPGSimulator20XXPart1();
             //Day21.RPGSimulator20XXPart2();
@@ -40,5 +41,6 @@ namespace AdventOfCode2015
         }
     }
 
+    
 
 }

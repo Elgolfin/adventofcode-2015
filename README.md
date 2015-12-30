@@ -97,6 +97,11 @@ Nothing special. Pretty straight forward.
 [Source Code][Day12SC] | 
 [Unit Tests][Day12UT]
 
+##Day14 Solution
+
+[Source Code][Day14SC] | 
+[Unit Tests][Day14UT]
+
 ##Day20 Solution
 
 [Source Code][Day20SC] | 
@@ -161,6 +166,7 @@ The program loaded within the computer can be executed via the **Run** method.
 [Day10SC]:https://github.com/Elgolfin/adventofcode-2015/blob/master/Day10.cs
 [Day11SC]:https://github.com/Elgolfin/adventofcode-2015/blob/master/Day11.cs
 [Day12SC]:https://github.com/Elgolfin/adventofcode-2015/blob/master/Day12.cs
+[Day14SC]:https://github.com/Elgolfin/adventofcode-2015/blob/master/Day14.cs
 
 [Day20SC]:https://github.com/Elgolfin/adventofcode-2015/blob/master/Day20.cs
 [Day21SC]:https://github.com/Elgolfin/adventofcode-2015/blob/master/Day21.cs
@@ -181,6 +187,7 @@ The program loaded within the computer can be executed via the **Run** method.
 [Day10UT]:https://github.com/Elgolfin/adventofcode-2015/blob/master/AdventOfCode2015UnitTests/Day10_UnitTest.cs
 [Day11UT]:https://github.com/Elgolfin/adventofcode-2015/blob/master/AdventOfCode2015UnitTests/Day11_UnitTest.cs
 [Day12UT]:https://github.com/Elgolfin/adventofcode-2015/blob/master/AdventOfCode2015UnitTests/Day12_UnitTest.cs
+[Day14UT]:https://github.com/Elgolfin/adventofcode-2015/blob/master/AdventOfCode2015UnitTests/Day14_UnitTest.cs
 
 [Day20UT]:https://github.com/Elgolfin/adventofcode-2015/blob/master/AdventOfCode2015UnitTests/Day20_UnitTest.cs
 [Day21UT]:https://github.com/Elgolfin/adventofcode-2015/blob/master/AdventOfCode2015UnitTests/Day21_UnitTest.cs
