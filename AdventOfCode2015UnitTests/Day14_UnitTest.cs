@@ -76,24 +76,24 @@ namespace AdventOfCode2015UnitTests
 
         [TestMethod]
         [TestCategory("Day14")]
-        public void Race_2_Contestants_Comet_Wins()
+        public void Race_2_Duration_2503_Contestants_Dancer_Wins_TraveledDistance()
         {
-            string characteristics = "Dancer can fly 16 km/s for 11 seconds, but then must rest for 162 seconds.";
+            string characteristics = "Dancer can fly 37 km/s for 1 seconds, but then must rest for 36 seconds.";
             Reeinder dancer = new Reeinder(characteristics);
-            characteristics = "Comet can fly 14 km/s for 10 seconds, but then must rest for 127 seconds.";
+            characteristics = "Comet can fly 3 km/s for 37 seconds, but then must rest for 76 seconds.";
             Reeinder comet = new Reeinder(characteristics);
-            Race race = new Race(1000);
+            Race race = new Race(2503);
+            race.Type = Race.WinningMethod.TraveledDistance;
             race.AddContestant(dancer);
             race.AddContestant(comet);
             Assert.AreEqual(2, race.Contestants.Count);
             race.Run();
-            Assert.AreEqual(comet, race.Winner);
-            Assert.AreEqual(1120, race.WinnerTraveledDistance);
+            Assert.AreEqual(2516, race.GetWinnerTraveledLength());
         }
 
         [TestMethod]
         [TestCategory("Day14")]
-        public void Race_2_Duration_2503_Contestants_Dancer_Wins()
+        public void Race_2_Duration_2503_Contestants_Dancer_Wins_TotalLeadingSeconds()
         {
             string characteristics = "Dancer can fly 37 km/s for 1 seconds, but then must rest for 36 seconds.";
             Reeinder dancer = new Reeinder(characteristics);
@@ -104,8 +104,43 @@ namespace AdventOfCode2015UnitTests
             race.AddContestant(comet);
             Assert.AreEqual(2, race.Contestants.Count);
             race.Run();
-            Assert.AreEqual(dancer, race.Winner);
-            Assert.AreEqual(2516, race.WinnerTraveledDistance);
+            Assert.AreEqual(1745, race.GetWinnerTotalLeadingSeconds());
         }
+
+        [TestMethod]
+        [TestCategory("Day14")]
+        public void Race_2_Duration_1000_Contestants_Comet_Wins_TraveledDistance()
+        {
+            string characteristics = "Dancer can fly 16 km/s for 11 seconds, but then must rest for 162 seconds.";
+            Reeinder dancer = new Reeinder(characteristics);
+            characteristics = "Comet can fly 14 km/s for 10 seconds, but then must rest for 127 seconds.";
+            Reeinder comet = new Reeinder(characteristics);
+            Race race = new Race(1000);
+            race.Type = Race.WinningMethod.TraveledDistance;
+            race.AddContestant(dancer);
+            race.AddContestant(comet);
+            Assert.AreEqual(2, race.Contestants.Count);
+            race.Run();
+            Assert.AreEqual(1120, race.GetWinnerTraveledLength());
+        }
+
+        [TestMethod]
+        [TestCategory("Day14")]
+        public void Race_2_Duration_1000_Contestants_Comet_Wins_TotalLeadingSeconds()
+        {
+            string characteristics = "Dancer can fly 16 km/s for 11 seconds, but then must rest for 162 seconds.";
+            Reeinder dancer = new Reeinder(characteristics);
+            characteristics = "Comet can fly 14 km/s for 10 seconds, but then must rest for 127 seconds.";
+            Reeinder comet = new Reeinder(characteristics);
+            Race race = new Race(1000);
+            race.AddContestant(dancer);
+            race.AddContestant(comet);
+            Assert.AreEqual(2, race.Contestants.Count);
+            race.Run();
+            Assert.AreEqual(689, race.GetWinnerTotalLeadingSeconds());
+        }
+
+
+
     }
 }
